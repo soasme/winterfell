@@ -17,6 +17,8 @@
 		128A169A1CE590B200C86BAE /* winterfellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128A16991CE590B200C86BAE /* winterfellTests.swift */; };
 		128A16A51CE590B200C86BAE /* winterfellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128A16A41CE590B200C86BAE /* winterfellUITests.swift */; };
 		128A16B31CE5928C00C86BAE /* winterfellGameSceneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128A16B21CE5928C00C86BAE /* winterfellGameSceneUITests.swift */; };
+		128A16B71CE61B5800C86BAE /* first-scene.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 128A16B61CE61B5800C86BAE /* first-scene.tmx */; };
+		128A16B91CE61B7900C86BAE /* tmw_desert_spacing.png in Resources */ = {isa = PBXBuildFile; fileRef = 128A16B81CE61B7900C86BAE /* tmw_desert_spacing.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		128A16A41CE590B200C86BAE /* winterfellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winterfellUITests.swift; sourceTree = "<group>"; };
 		128A16A61CE590B200C86BAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		128A16B21CE5928C00C86BAE /* winterfellGameSceneUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = winterfellGameSceneUITests.swift; sourceTree = "<group>"; };
+		128A16B61CE61B5800C86BAE /* first-scene.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "first-scene.tmx"; sourceTree = "<group>"; };
+		128A16B81CE61B7900C86BAE /* tmw_desert_spacing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tmw_desert_spacing.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 				128A16861CE590B200C86BAE /* GameViewController.swift */,
 				128A16881CE590B200C86BAE /* Main.storyboard */,
 				128A168B1CE590B200C86BAE /* Assets.xcassets */,
+				128A16B51CE61B3800C86BAE /* Assets */,
 				128A168D1CE590B200C86BAE /* LaunchScreen.storyboard */,
 				128A16901CE590B200C86BAE /* Info.plist */,
 			);
@@ -132,6 +137,15 @@
 				128A16B21CE5928C00C86BAE /* winterfellGameSceneUITests.swift */,
 			);
 			path = winterfellUITests;
+			sourceTree = "<group>";
+		};
+		128A16B51CE61B3800C86BAE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				128A16B81CE61B7900C86BAE /* tmw_desert_spacing.png */,
+				128A16B61CE61B5800C86BAE /* first-scene.tmx */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,7 +253,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				128A16831CE590B200C86BAE /* GameScene.sks in Resources */,
+				128A16B71CE61B5800C86BAE /* first-scene.tmx in Resources */,
 				128A168F1CE590B200C86BAE /* LaunchScreen.storyboard in Resources */,
+				128A16B91CE61B7900C86BAE /* tmw_desert_spacing.png in Resources */,
 				128A168C1CE590B200C86BAE /* Assets.xcassets in Resources */,
 				128A168A1CE590B200C86BAE /* Main.storyboard in Resources */,
 			);
