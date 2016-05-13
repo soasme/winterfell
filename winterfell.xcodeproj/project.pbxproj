@@ -19,6 +19,9 @@
 		128A16B31CE5928C00C86BAE /* winterfellGameSceneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128A16B21CE5928C00C86BAE /* winterfellGameSceneUITests.swift */; };
 		128A16B71CE61B5800C86BAE /* first-scene.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 128A16B61CE61B5800C86BAE /* first-scene.tmx */; };
 		128A16B91CE61B7900C86BAE /* tmw_desert_spacing.png in Resources */ = {isa = PBXBuildFile; fileRef = 128A16B81CE61B7900C86BAE /* tmw_desert_spacing.png */; };
+		128A16BD1CE61DF900C86BAE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 128A16BC1CE61DF900C86BAE /* libz.tbd */; };
+		128A16C11CE61F1D00C86BAE /* LFCGzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 128A16C01CE61F1D00C86BAE /* LFCGzipUtility.m */; };
+		128A16C31CE61F5D00C86BAE /* JSTileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 128A16C21CE61F5D00C86BAE /* JSTileMap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,13 @@
 		128A16B21CE5928C00C86BAE /* winterfellGameSceneUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = winterfellGameSceneUITests.swift; sourceTree = "<group>"; };
 		128A16B61CE61B5800C86BAE /* first-scene.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "first-scene.tmx"; sourceTree = "<group>"; };
 		128A16B81CE61B7900C86BAE /* tmw_desert_spacing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tmw_desert_spacing.png; sourceTree = "<group>"; };
+		128A16BA1CE61D8400C86BAE /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
+		128A16BC1CE61DF900C86BAE /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		128A16BE1CE61EB200C86BAE /* LFCGzipUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LFCGzipUtility.h; sourceTree = "<group>"; };
+		128A16BF1CE61F1C00C86BAE /* winterfell-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "winterfell-Bridging-Header.h"; sourceTree = "<group>"; };
+		128A16C01CE61F1D00C86BAE /* LFCGzipUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFCGzipUtility.m; sourceTree = "<group>"; };
+		128A16C21CE61F5D00C86BAE /* JSTileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTileMap.m; sourceTree = "<group>"; };
+		128A16C41CE61F7F00C86BAE /* JSTileMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSTileMap.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				128A16BD1CE61DF900C86BAE /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +98,8 @@
 		128A16741CE590B200C86BAE = {
 			isa = PBXGroup;
 			children = (
+				128A16BC1CE61DF900C86BAE /* libz.tbd */,
+				128A16BA1CE61D8400C86BAE /* libz.1.dylib */,
 				128A167F1CE590B200C86BAE /* winterfell */,
 				128A16981CE590B200C86BAE /* winterfellTests */,
 				128A16A31CE590B200C86BAE /* winterfellUITests */,
@@ -116,6 +129,11 @@
 				128A16B51CE61B3800C86BAE /* Assets */,
 				128A168D1CE590B200C86BAE /* LaunchScreen.storyboard */,
 				128A16901CE590B200C86BAE /* Info.plist */,
+				128A16BE1CE61EB200C86BAE /* LFCGzipUtility.h */,
+				128A16C01CE61F1D00C86BAE /* LFCGzipUtility.m */,
+				128A16C41CE61F7F00C86BAE /* JSTileMap.h */,
+				128A16C21CE61F5D00C86BAE /* JSTileMap.m */,
+				128A16BF1CE61F1C00C86BAE /* winterfell-Bridging-Header.h */,
 			);
 			path = winterfell;
 			sourceTree = "<group>";
@@ -283,7 +301,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				128A16851CE590B200C86BAE /* GameScene.swift in Sources */,
+				128A16C31CE61F5D00C86BAE /* JSTileMap.m in Sources */,
 				128A16871CE590B200C86BAE /* GameViewController.swift in Sources */,
+				128A16C11CE61F1D00C86BAE /* LFCGzipUtility.m in Sources */,
 				128A16811CE590B200C86BAE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,10 +447,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = winterfell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soasme.game.winterfell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "winterfell/winterfell-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -438,10 +461,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = winterfell/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soasme.game.winterfell;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "winterfell/winterfell-Bridging-Header.h";
 			};
 			name = Release;
 		};
