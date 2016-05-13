@@ -1,6 +1,6 @@
 //
-//  winterfellUITests.swift
-//  winterfellUITests
+//  winterfellGameSceneUITests.swift
+//  winterfell
 //
 //  Created by 林 炬 on 16/5/13.
 //  Copyright © 2016年 com.soasme. All rights reserved.
@@ -8,11 +8,11 @@
 
 import XCTest
 
-class winterfellUITests: XCTestCase {
-        
+class winterfellGameSceneUITests: XCTestCase {
+    
     override func setUp() {
         super.setUp()
-        
+       
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
         // In UI tests it is usually best to stop immediately when a failure occurs.
@@ -27,23 +27,18 @@ class winterfellUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
-    func testLoadHelloScene() {
+    func testLoadRoleInGameScene() {
         
     }
     
-    func testLoadLevelScene() {
+    func testLoadTMXInGameScene() {
         
     }
-    
-    func testLoadGameScene() {
-        
-    }
-    
-    
+
 }

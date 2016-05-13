@@ -16,6 +16,7 @@
 		128A168F1CE590B200C86BAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 128A168D1CE590B200C86BAE /* LaunchScreen.storyboard */; };
 		128A169A1CE590B200C86BAE /* winterfellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128A16991CE590B200C86BAE /* winterfellTests.swift */; };
 		128A16A51CE590B200C86BAE /* winterfellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128A16A41CE590B200C86BAE /* winterfellUITests.swift */; };
+		128A16B31CE5928C00C86BAE /* winterfellGameSceneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128A16B21CE5928C00C86BAE /* winterfellGameSceneUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		128A16A01CE590B200C86BAE /* winterfellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = winterfellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		128A16A41CE590B200C86BAE /* winterfellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winterfellUITests.swift; sourceTree = "<group>"; };
 		128A16A61CE590B200C86BAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		128A16B21CE5928C00C86BAE /* winterfellGameSceneUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = winterfellGameSceneUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				128A16A41CE590B200C86BAE /* winterfellUITests.swift */,
 				128A16A61CE590B200C86BAE /* Info.plist */,
+				128A16B21CE5928C00C86BAE /* winterfellGameSceneUITests.swift */,
 			);
 			path = winterfellUITests;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				128A16B31CE5928C00C86BAE /* winterfellGameSceneUITests.swift in Sources */,
 				128A16A51CE590B200C86BAE /* winterfellUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
