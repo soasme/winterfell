@@ -49,9 +49,9 @@
   <tile id="43" terrain="2,0,2,2"/>
   <tile id="44" terrain="0,2,2,2"/>
  </tileset>
- <layer name="Ground" width="20" height="20">
+ <layer name="Floor" width="20" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA62U2wrCMAyGM6eI8zRPiKetOvAIzvd/OhNoWShNW6UXH+wifEv+hhQAUHgYIzNkjpTIKFBPrJGlwMryLYS6jdVDJXC3fAqpHXXmPy5fy75vzDdBhgFC/V2ZL4Zf5u0j2wAm81pn4+uv1P4dsmcckAzpReRBTJmP/Gfkwmig26PYXHh/Pl8oD2LAfPTeD+TJeEG3LzRz7nmPN6TdlwrS7gv3xeyL5FMOH+X3serMnpl98fXXOnzSDPzu+OZViX12f67bEuNrBZ+K8B11li5yy5cJdScI3+1/7v0Xl2GeMUAGAAA=
+   H4sIAAAAAAAAA5NjYGCQG8WjeBSP4lE8iknEAKd7AItABgAA
   </data>
  </layer>
 </map>
