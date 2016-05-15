@@ -19,9 +19,9 @@
 		128A16B31CE5928C00C86BAE /* winterfellGameSceneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128A16B21CE5928C00C86BAE /* winterfellGameSceneUITests.swift */; };
 		128A16B71CE61B5800C86BAE /* first-scene.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 128A16B61CE61B5800C86BAE /* first-scene.tmx */; };
 		128A16B91CE61B7900C86BAE /* tmw_desert_spacing.png in Resources */ = {isa = PBXBuildFile; fileRef = 128A16B81CE61B7900C86BAE /* tmw_desert_spacing.png */; };
-		128A16BD1CE61DF900C86BAE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 128A16BC1CE61DF900C86BAE /* libz.tbd */; };
 		128A16C11CE61F1D00C86BAE /* LFCGzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 128A16C01CE61F1D00C86BAE /* LFCGzipUtility.m */; };
 		128A16C31CE61F5D00C86BAE /* JSTileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 128A16C21CE61F5D00C86BAE /* JSTileMap.m */; };
+		128A16C51CE6244B00C86BAE /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 128A16BA1CE61D8400C86BAE /* libz.1.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				128A16BD1CE61DF900C86BAE /* libz.tbd in Frameworks */,
+				128A16C51CE6244B00C86BAE /* libz.1.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
