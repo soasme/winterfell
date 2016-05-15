@@ -11,7 +11,15 @@ import SpriteKit
 class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
+
+        // load first scene tmx map
         let tiledmap = JSTileMap(named: "first-scene.tmx");
+        
+        // center map on scene's anchor point
+//        let rect = tiledmap.calculateAccumulatedFrame();
+        tiledmap.position = CGPointMake(160, 80);
+        
+        // add map to scene.
         self.addChild(tiledmap);
         
 //        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
