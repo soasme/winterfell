@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" nextobjectid="1">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" nextobjectid="22">
  <tileset firstgid="1" name="desert" tilewidth="32" tileheight="32" spacing="1" margin="1" tilecount="48" columns="8">
   <image source="tmw_desert_spacing.png" width="265" height="199"/>
   <terraintypes>
@@ -51,7 +51,30 @@
  </tileset>
  <layer name="Floor" width="20" height="20">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAA5NjYGCQG8WjeBSP4lE8iknEAKd7AItABgAA
+   H4sIAAAAAAAAA62UTQ+CMAyGpyLiJ9xEDyRiPKjx//89u2RN6pt2HcTDc1nLs7UrG0MIo+BOnIg20RFD4ga5JeR8T+LlMMVXExuHKT65bjHXVxFnBc93ELUcYZ8LcQU8n0VXeN/ok3Wt/+CT/RuEM67L+Xmk73F+3o6PY9zXJvzOujZT2HfNh3H2eb3n/FrZS/Nx3Jqn3jhXBXH2WXXhP4b7Ro+cv0/y4TkQq1/We6M5NB/WZ703pT6rH8gywwp8Cyc/ssuwB9/WyfeY4/sCU9+QmEAGAAA=
   </data>
  </layer>
+ <layer name="Items" width="20" height="20">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA2NgIAzUiVAz0ECNyuYpUNm8UUA+UKCBmfI0MJNegNpuVyBRnFxAirtx2Y2rLNInzSlE2aVHpN0gQO3yZ6gAAP+t7btABgAA
+  </data>
+ </layer>
+ <objectgroup name="Meta">
+  <properties>
+   <property name="collidable" type="bool" value="true"/>
+  </properties>
+  <object id="7" x="288" y="0" width="32" height="32"/>
+  <object id="8" x="320" y="64" width="32" height="64"/>
+  <object id="9" x="288" y="256" width="32" height="32"/>
+  <object id="10" x="320" y="288" width="32" height="32"/>
+  <object id="11" x="544" y="352" width="32" height="64"/>
+  <object id="12" x="576" y="512" width="32" height="32"/>
+  <object id="13" x="448" y="448" width="32" height="32"/>
+  <object id="14" x="352" y="512" width="32" height="32"/>
+  <object id="15" x="224" y="512" width="32" height="32"/>
+  <object id="16" x="192" y="480" width="32" height="32"/>
+  <object id="19" x="96" y="416" width="32" height="64"/>
+  <object id="20" x="0" y="480" width="32" height="32"/>
+  <object id="21" x="32" y="512" width="32" height="32"/>
+ </objectgroup>
 </map>
