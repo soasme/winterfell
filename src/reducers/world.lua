@@ -14,6 +14,7 @@ worldReducer.initialState = {
    },
 }
 
+-- fixme: check collidable objects
 function worldReducer.reducer(state, action)
    if action.type == 'MOVE_UP' then
       if state.focus.height < state.size.height then
