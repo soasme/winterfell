@@ -1,3 +1,5 @@
+require('core')
+
 local camera = {}
 
 function math.clamp(x, min, max)
@@ -15,19 +17,21 @@ function camera.load()
 end
 
 function camera.update(dt)
+    local state = store.getState()
     store.dispatch({
         type = 'SET_CAMERA_POSITION',
-        x = store.player.x - love.graphics.getWidth() / 2,
-        y = store.player.y - love.graphics.getHeight() / 2,
+        x = state.player.x - love.graphics.getWidth() / 2,
+        y = state.player.y - love.graphics.getHeight() / 2,
     })
 end
 
 function camera.draw(children)
     -- Set camera
+    local state = store.getState()
     love.graphics.push()
-    love.graphics.rotate(-store.camera.rotation)
-    love.graphics.scale(1 / store.camera.scaleX, 1 / store.camera.scaleY)
-    love.grahpics.translate(-store.camera.x, -store.camera.y)
+    love.graphics.rotate(-state.camera.rotation)
+    love.graphics.scale(1 / state.camera.scaleX, 1 / state.camera.scaleY)
+    love.graphics.translate(-state.camera.x, -state.camera.y)
 
     -- Render children nodes
     if children then
@@ -37,7 +41,7 @@ function camera.draw(children)
     end
 
     -- Unset camera
-    love.grahpics.pop()
+    love.graphics.pop()
 end
 
 return camera
