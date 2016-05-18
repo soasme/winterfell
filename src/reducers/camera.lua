@@ -1,3 +1,9 @@
+-- A great thanks to @BlackBulletIV's tutorial about camera usage.
+-- http://nova-fusion.com/2011/04/19/cameras-in-love2d-part-1-the-basics/
+-- http://nova-fusion.com/2011/04/22/cameras-in-love2d-part-2-parallax-scrolling/
+-- http://nova-fusion.com/2011/05/09/cameras-in-love2d-part-3-movement-bounds/
+-- Although I adapt the code to redux style, he wrote all the core logics.
+
 local utils = require('reducers/utils')
 local assign = utils.assign
 
