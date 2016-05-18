@@ -7,19 +7,21 @@
 local utils = require('reducers/utils')
 local assign = utils.assign
 
-camera = {}
+function math.clamp(x, min, max)
+    return x < min and min or (x > max and max or x)
+end
 
-camera.initialState = {
-    x = 0,
-    y = 0,
-    scaleX = 1,
-    scaleY = 1,
-    rotation = 0,
-    bounds = {x1 = 0, y1 = 0, x2 = 0, y2 = 0}
-}
-
-function camera.reducer(state, action)
-    if action.type == 'MOVE_CAMERA' then
+function reducer(state, action)
+    if action.type == '__INIT__' then
+        return {
+            x = 0,
+            y = 0,
+            scaleX = 1,
+            scaleY = 1,
+            rotation = 0,
+            bounds = {x1 = 0, y1 = 0, x2 = 0, y2 = 0}
+        }
+    elseif action.type == 'MOVE_CAMERA' then
         local dx = action.dx or 0
         local dy = action.dy or 0
         return assign(state, {
@@ -63,7 +65,7 @@ function camera.reducer(state, action)
             scaleX = sx,
             scaleY = sy,
         })
-    elseif action.type == 'SET_CAMERA_BDOUNDS' then
+    elseif action.type == 'SET_CAMERA_BOUNDS' then
         return assign(state, {
             bounds = {
                 x1 = action.x1,
@@ -72,6 +74,9 @@ function camera.reducer(state, action)
                 y2 = action.y2,
             }
         })
+    else
+        return state
     end
 end
-return camera
+
+return reducer
