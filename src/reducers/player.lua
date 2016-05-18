@@ -1,12 +1,13 @@
-local playerReducer = {}
+local player = {}
 local utils = require('reducers/utils')
 local assign = utils.assign
 
-local initialState = {
-   direction = 'UP',
+ player.initialState = {
+    direction = 'UP',
+    isWalking = false,
 }
 
-function playerReducer.reducer(state, action)
+function player.reducer(state, action)
    if action.type == 'MOVE_UP' then
       return assign(state, {
          direction = 'UP'
@@ -28,4 +29,4 @@ function playerReducer.reducer(state, action)
    end
 end
 
-return playerReducer
+return player
