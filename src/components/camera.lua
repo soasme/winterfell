@@ -29,6 +29,7 @@ function camera.draw(children)
     love.graphics.scale(1 / store.camera.scaleX, 1 / store.camera.scaleY)
     love.grahpics.translate(-store.camera.x, -store.camera.y)
 
+    -- Render children nodes
     if children then
         for _, child in pairs(children) do
             child()
