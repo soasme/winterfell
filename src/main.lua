@@ -1,30 +1,24 @@
-local cameraComponent = require('components/camera')
-local playerComponent = require('components/player')
-local sti = require "sti"
-
 require('core')
 
+local cameraComponent = require('components/camera')
+local playerComponent = require('components/player')
+local mapComponent = require('components/map')
+
 function love.load()
-  map = sti.new("assets/first-scene.lua")
-
+  mapComponent.load()
   cameraComponent.load()
-
   playerComponent.load()
 end
 
 function love.update(dt)
-    map:update(dt)
-
+    mapComponent.update(dt)
     playerComponent.update(dt)
-
     cameraComponent.update(dt)
 end
 
 function love.draw()
-    function draw_map() map:draw() end
-
     cameraComponent.draw({
-        draw_map,
+        mapComponent.draw,
         playerComponent.draw,
     })
 end
