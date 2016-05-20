@@ -1,5 +1,3 @@
-require('core')
-
 local camera = {}
 
 function math.clamp(x, min, max)

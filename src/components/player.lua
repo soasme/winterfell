@@ -1,5 +1,3 @@
-require('core')
-
 local player = {}
 
 function player.load()
