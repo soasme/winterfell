@@ -5,7 +5,6 @@ function reducer(state, action)
     if action.type == '__INIT__' then
         return {
             direction = 'UP',
-            isWalking = false,
             x = 0,
             y = 0,
             width = 32,
@@ -20,22 +19,22 @@ function reducer(state, action)
     elseif action.type == 'MOVE_UP' then
         return assign(state, {
             direction = 'UP',
-            y = state.y - state.speed * action.dt,
+            y = math.max(state.y - state.speed * action.dt, 0),
         })
     elseif action.type == 'MOVE_DOWN' then
         return assign(state, {
             direction = 'DOWN',
-            y = state.y + state.speed * action.dt,
+            y = math.min(state.y + state.speed * action.dt, (20-1)*32),
         })
     elseif action.type == 'MOVE_LEFT' then
         return assign(state, {
             direction = 'LEFT',
-            x = state.x - state.speed * action.dt,
+            x = math.max(state.x - state.speed * action.dt, 0),
         })
     elseif action.type == 'MOVE_RIGHT' then
         return assign(state, {
             direction = 'RIGHT',
-            x = state.x + state.speed * action.dt,
+            x = math.min(state.x + state.speed * action.dt, (20-1)*32),
         })
     else
         return state

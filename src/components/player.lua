@@ -18,11 +18,13 @@ end
 
 function player.update(dt)
     local state = store.getState()
+    local x = state.player.x
+    local y = state.player.y
+
     if player.isMovingToLeft() then
         store.dispatch({
             type = 'MOVE_LEFT',
             dt = dt,
-            -- maxDistance=store.getState().map.nextCollisionObject.x - state.getState().player.x if nextCollisionObject else nil,
         })
     elseif love.keyboard.isDown('right') then
         store.dispatch({
@@ -38,6 +40,15 @@ function player.update(dt)
         store.dispatch({
             type = 'MOVE_DOWN',
             dt = dt,
+        })
+    end
+
+    if x ~= store.getState().player.x or y ~= store.getState().player.y then
+        store.dispatch({
+            type = 'PLAYER_MOVED',
+            x = store.getState().player.x,
+            y = store.getState().player.y,
+            direction = store.getState().player.direction,
         })
     end
 end
