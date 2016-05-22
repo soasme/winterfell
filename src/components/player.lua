@@ -8,12 +8,21 @@ function player.load()
     })
 end
 
+function player.isMovingToLeft()
+    if love.keyboard.isDown('left') then
+        return true
+    end
+    -- fixme: add touch support
+    -- if touch coordinate is left then current player coordinate : yes
+end
+
 function player.update(dt)
     local state = store.getState()
-    if love.keyboard.isDown('left') then
+    if player.isMovingToLeft() then
         store.dispatch({
             type = 'MOVE_LEFT',
             dt = dt,
+            -- maxDistance=store.getState().map.nextCollisionObject.x - state.getState().player.x if nextCollisionObject else nil,
         })
     elseif love.keyboard.isDown('right') then
         store.dispatch({
