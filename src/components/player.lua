@@ -35,7 +35,6 @@ end
 
 function player.draw(children)
     local _player = store.getState().player
-    love.graphics.setColor({ 150, 150, 150 })
     love.graphics.rectangle('fill', 
         _player.x, _player.y, _player.width, _player.height)
 end
