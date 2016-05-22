@@ -7,8 +7,8 @@ local mapComponent = require('components/map')
 local messageComponent = require('components/message')
 
 function love.load()
-  mapComponent.load()
   cameraComponent.load()
+  mapComponent.load()
   playerComponent.load()
   messageComponent.load()
 end
