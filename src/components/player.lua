@@ -20,26 +20,34 @@ function player.update(dt)
     local state = store.getState()
     local x = state.player.x
     local y = state.player.y
+    local boundaryTop = 0
+    local boundaryBottom = (20 - 1) * 32
+    local boundaryLeft = 0
+    local boundaryRight = (20 - 1) * 32
 
     if player.isMovingToLeft() then
         store.dispatch({
             type = 'MOVE_LEFT',
             dt = dt,
+            boundary=boundaryLeft,
         })
     elseif love.keyboard.isDown('right') then
         store.dispatch({
             type = 'MOVE_RIGHT',
             dt = dt,
+            boundary=boundaryRight,
         })
     elseif love.keyboard.isDown('up') then
         store.dispatch({
             type = 'MOVE_UP',
             dt = dt,
+            boundary=boundaryTop,
         })
     elseif love.keyboard.isDown('down') then
         store.dispatch({
             type = 'MOVE_DOWN',
             dt = dt,
+            boundary=boundaryBottom,
         })
     end
 
