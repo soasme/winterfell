@@ -1,4 +1,10 @@
-local player = {}
+local player = {
+    props = {
+        isWalking = false,
+        boundary = 0,
+        direction = 'UP',
+    }
+}
 
 function player.load()
     store.dispatch({
@@ -8,46 +14,38 @@ function player.load()
     })
 end
 
-function player.isMovingToLeft()
-    if love.keyboard.isDown('left') then
-        return true
-    end
-    -- fixme: add touch support
-    -- if touch coordinate is left then current player coordinate : yes
-end
-
 function player.update(dt)
     local state = store.getState()
     local x = state.player.x
     local y = state.player.y
-    local boundaryTop = 0
-    local boundaryBottom = (20 - 1) * 32
-    local boundaryLeft = 0
-    local boundaryRight = (20 - 1) * 32
+    local direction = state.player.direction
 
-    if player.isMovingToLeft() then
-        store.dispatch({
-            type = 'MOVE_LEFT',
-            dt = dt,
-            boundary=boundaryLeft,
-        })
+    if love.keyboard.isDown('left') then
+        player.props.direction = 'LEFT'
+        player.props.isWalking = true
+        player.props.boundary = 0
     elseif love.keyboard.isDown('right') then
-        store.dispatch({
-            type = 'MOVE_RIGHT',
-            dt = dt,
-            boundary=boundaryRight,
-        })
+        player.props.direction = 'RIGHT'
+        player.props.isWalking = true
+        player.props.boundary = (20 - 1) * 32
     elseif love.keyboard.isDown('up') then
-        store.dispatch({
-            type = 'MOVE_UP',
-            dt = dt,
-            boundary=boundaryTop,
-        })
+        player.props.direction = 'UP'
+        player.props.isWalking = true
+        player.props.boundary = 0
     elseif love.keyboard.isDown('down') then
+        player.props.direction = 'DOWN'
+        player.props.isWalking = true
+        player.props.boundary = (20 - 1) * 32
+    else
+        player.props.isWalking = false
+        player.props.boundary = 0
+    end
+
+    if player.props.isWalking then
         store.dispatch({
-            type = 'MOVE_DOWN',
+            type = 'MOVE_' .. player.props.direction,
             dt = dt,
-            boundary=boundaryBottom,
+            boundary=player.props.boundary,
         })
     end
 

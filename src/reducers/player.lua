@@ -17,28 +17,28 @@ function reducer(state, action)
             y = action.y or 0,
         })
     elseif action.type == 'MOVE_UP' then
-        local delta = math.max(state.speed * action.dt, action.boundary)
+        local y = math.max(action.boundary, state.y - state.speed * action.dt)
         return assign(state, {
             direction = 'UP',
-            y = state.y - delta,
+            y = y,
         })
     elseif action.type == 'MOVE_DOWN' then
-        local delta = math.max(state.speed * action.dt, action.boundary)
+        local y = math.min(action.boundary, state.y + state.speed * action.dt)
         return assign(state, {
             direction = 'DOWN',
-            y = state.y + delta,
+            y = y,
         })
     elseif action.type == 'MOVE_LEFT' then
-        local delta = math.max(state.speed * action.dt, action.boundary)
+        local x = math.max(action.boundary, state.x - state.speed * action.dt)
         return assign(state, {
             direction = 'LEFT',
-            x = state.x - delta,
+            x = x,
         })
     elseif action.type == 'MOVE_RIGHT' then
-        local delta = math.min(state.speed * action.dt, action.boundary)
+        local x = math.min(action.boundary, state.x + state.speed * action.dt)
         return assign(state, {
             direction = 'RIGHT',
-            x = state.x + delta,
+            x = x,
         })
     else
         return state
